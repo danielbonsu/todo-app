@@ -1,38 +1,131 @@
-.App {
-  text-align: center;
+* {
+  padding: 0;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: rgb(241, 241, 241);
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
+  width: 500px;
+  height: 650px;
+  background: rgb(255, 255, 255);
+  margin-top: 200px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #000;
+  overflow: auto;
   display: flex;
   flex-direction: column;
+  align-content: center;
   align-items: center;
+}
+
+.container .header {
+  width: 100%;
+  height: 200px;
+  background-image: linear-gradient(
+    rgb(134, 204, 195),
+    #fff
+  );
+  opacity: 0.78;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  flex-direction: column;
+  border: 0px 0px 0px 1px solid rgb(123, 195, 195);
+  font-size: 24px;
+  color: rgb(0, 0, 0);
 }
 
-.App-link {
-  color: #61dafb;
+.todoForm {
+  width: 97%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todoNotes,
+.todoType,
+.submitBTN {
+  width: 90%;
+  margin-top: 10px;
+  padding: 5px 0px;
+}
+
+.submitBTN {
+  background: rgb(0, 0, 0);
+  color: #fff;
+  outline: none;
+  border: none;
+  padding: 14px 20px;
+  border-radius: 8px;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.item {
+  padding: 0px 55px;
+  color: rgb(0, 0, 0);
+  border: 1px solid #555;
+  width: 80%;
+  height: 30px;
+  padding: 0px 10px;
+  background: rgb(255, 255, 255);
+  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.item .todo-edits {
+  display: flex;
+  justify-content: space-between;
+}
+.fa-trash-alt {
+  color: #e27;
+  margin-right: 10px;
+}
+
+.fa-edit {
+  color: rgb(0, 0, 0);
+}
+i:hover {
+  opacity: 0.4;
+  cursor: pointer;
+}
+
+.alert-message-success {
+  background: rgb(114, 216, 216);
+  color: #fff;
+}
+
+.alert-message-danger {
+  background: rgb(255, 0, 0);
+  color: #fff;
+}
+
+.alertDiv {
+  width: 85%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 15px;
+  padding: 10px;
 }

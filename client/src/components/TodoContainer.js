@@ -88,10 +88,18 @@ const TodoContainer = () => {
           className='submitBTN'
         />
       </form>
-      {todos &&
-        todos.map((todo, idx) => (
-          <TodoItem todo={todo} key={idx} />
-        ))}
+
+      <div className='todo-holder'>
+        <div className='holder-header'>
+          <h4>Current Todos</h4>
+        </div>
+        <div className='holder-body'>
+          {todos &&
+            todos.map((todo, idx) => (
+              <TodoItem todo={todo} key={idx} />
+            ))}
+        </div>
+      </div>
     </div>
   );
 };

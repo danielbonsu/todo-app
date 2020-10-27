@@ -26,13 +26,19 @@ const TodoContainer = () => {
       dispatch(
         setTodoAlert('field cannot be null', 'danger')
       );
+    } else {
+      dispatch(
+        addTodo({
+          ...data,
+          id: uuidv4(),
+        })
+      );
+
+      dispatch(
+        setTodoAlert('todo added successfully', 'success')
+      );
+      //   setData({ ...data, todoNotes: '' });
     }
-    dispatch(
-      addTodo({
-        ...data,
-        id: uuidv4(),
-      })
-    );
   };
 
   const { todos } = useSelector((state) => state.todos);

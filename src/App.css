@@ -112,20 +112,26 @@ i:hover {
 }
 
 .alert-message-success {
-  background: rgb(114, 216, 216);
+  background: rgb(22, 93, 43);
   color: #fff;
 }
 
 .alert-message-danger {
-  background: rgb(255, 0, 0);
+  background: rgb(144, 40, 40);
   color: #fff;
 }
 
 .alertDiv {
   width: 85%;
   display: flex;
-  justify-content: space-evenly;
+  /* justify-content: space-evenly; */
   align-items: center;
   font-size: 15px;
   padding: 10px;
+  border-radius: 10px;
+}
+
+.fa-info-circle {
+  margin-right: 40px;
+  font-size: 15px;
 }
